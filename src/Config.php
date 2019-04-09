@@ -1,4 +1,5 @@
 <?php
+
 namespace Helhum\DotEnvConnector;
 
 /*
@@ -72,7 +73,7 @@ class Config
         switch ($key) {
             case 'env-file':
                 $val = rtrim($this->process($this->config[$key], $flags), '/\\');
-                return ($flags & self::RELATIVE_PATHS == 1) ? $val : $this->realpath($val);
+                return ($flags & self::RELATIVE_PATHS == 1) ? "'" . $val . "'" : $this->realpath($val);
             default:
                 return $this->process($this->config[$key], $flags);
         }

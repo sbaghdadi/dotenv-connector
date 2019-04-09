@@ -1,4 +1,5 @@
 <?php
+
 namespace Helhum\DotEnvConnector;
 
 /*
@@ -81,11 +82,8 @@ class IncludeFile
      */
     private function getIncludeFileContent()
     {
-        $envFile = $this->config->get('env-file');
-        $pathToEnvFileCode = $this->filesystem->findShortestPathCode(
-            $this->includeFile,
-            $envFile
-        );
+        $envFile = $this->config->get('env-file', 1);
+        $pathToEnvFileCode = $envFile;
         $includeFileContent = file_get_contents($this->includeFileTemplate);
         $includeFileContent = $this->replaceToken('env-file', $pathToEnvFileCode, $includeFileContent);
 
