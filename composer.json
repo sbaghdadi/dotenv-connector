@@ -1,16 +1,16 @@
 {
-    "name": "helhum/dotenv-connector",
+    "name": "sbaghdadi/dotenv-connector",
     "type": "composer-plugin",
     "license": "MIT",
-    "description": "Makes it possible to set environment variables for composer projects.",
+    "description": "Makes it possible to set environment variables for composer projects. This is just a fork.",
     "keywords": [
         "composer", "env", "12factor", "dotenv"
     ],
-    "homepage": "https://github.com/helhum/dotenv-connector",
+    "homepage": "https://github.com/sbaghdadi/dotenv-connector",
     "authors": [
         {
-            "name": "Helmut Hummel",
-            "email": "info@helhum.io"
+            "name": "Sammy Baghdadi",
+            "email": "s.baghdadi@familie-redlich.de"
         }
     ],
     "autoload": {
